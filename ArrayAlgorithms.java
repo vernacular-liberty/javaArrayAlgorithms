@@ -375,7 +375,7 @@ public class ArrayAlgorithms{
     }
 
     /**
-     * Creates an array of the shared elements in arrayOne and Two
+     * Creates an array of the shared elements in arrayOne and arrayTwo
      * @param arrayOne input array one
      * @param arrayTwo input array two
      * @return new array of shared elements
@@ -473,7 +473,6 @@ public class ArrayAlgorithms{
             array = swap(array, min, newMin);
         } 
         return selectionSortAscendRec(array, min + 1);
-
     }
 
     /**
@@ -537,5 +536,27 @@ public class ArrayAlgorithms{
         return selectionSortDescendRec(array, 0);
 
     }
-    
+
+    /**
+     * Sorts values in ascending order without duplicate elements
+     * @param a int array of values to sort
+     * @param n int array length
+     * @return sorted array of unique values
+     */
+    public static int[] sortAscend(int[] a, int n){
+        int max = findMax(a);
+        int[] countA = new int[max + 1]; 
+        for (int i = 0; i < n; i++) { 
+            countA[a[i]]++;
+        }
+        int[] sortedA = new int[n];
+        int count = 0;
+        for (int i = 1; i <= max; i++) { 
+            if (countA[i] > 0) {
+                sortedA[count] = i;
+                count++;
+            }
+        }
+        return sortedA;
+    } 
 }

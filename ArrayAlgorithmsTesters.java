@@ -693,6 +693,19 @@ public class ArrayAlgorithmsTesters extends ArrayAlgorithms{
         System.out.println("");
     }
 
+    /**
+     * Tests sortAscend function
+     */
+    public static void testSortAscend(){
+        int[] a = {50, 12, 33, 33, 33, 4,4,4,5,6,7,8,9,1,88,11,10};
+        int[] sortedA = sortAscend(a, a.length);
+        System.out.println("1. Testing: sortAscend");
+        System.out.println("Input: " + Arrays.toString(a));
+        System.out.println("Output: " + Arrays.toString(sortedA));
+        passTest(true);
+        System.out.println("");
+    }
+
     public static void main(String[] args){
         testCopy();
         testAddAll();
@@ -722,5 +735,6 @@ public class ArrayAlgorithmsTesters extends ArrayAlgorithms{
         testSelectionSortAscendRec();
         testSelectionSortDescend();
         testSelectionSortDescendRec();
+        testSortAscend();
     }
 }
