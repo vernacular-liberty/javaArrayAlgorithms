@@ -31,5 +31,12 @@ Practice in java and array manipulation
 - selectionSortDescendRec(): sorts array in descending order recursively.
 - sortAscend(): sorts values in ascending order without duplicate elements.
 
-### ArrayAlgorithmsTesters.java
+## ArrayAlgorithmsTesters.java
 Tests all algorithms in ArrayAlgorithms.java
+
+## Coming Soon
+- mergeSort()
+- shellSort()
+
+## References
+- https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm
